@@ -1,0 +1,147 @@
+[
+    {
+        "id": 1,
+        "name": "The Gourmet Kitchen",
+        "address": "123 Main St, Springfield",
+        "rating": 4.5,
+        "cuisine": "Italian",
+        "phone": "(123) 456-7890",
+        "opening_hours": {
+            "monday": "10:00 AM - 10:00 PM",
+            "tuesday": "10:00 AM - 10:00 PM",
+            "wednesday": "10:00 AM - 10:00 PM",
+            "thursday": "10:00 AM - 10:00 PM",
+            "friday": "10:00 AM - 11:00 PM",
+            "saturday": "10:00 AM - 11:00 PM",
+            "sunday": "10:00 AM - 9:00 PM"
+        },
+        "menu": [
+            {
+                "item_name": "Margherita Pizza",
+                "price": 12.99,
+                "description": "Classic Margherita with fresh tomatoes and basil"
+            },
+            {
+                "item_name": "Spaghetti Carbonara",
+                "price": 14.99,
+                "description": "Traditional Carbonara with pancetta and creamy sauce"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Sushi World",
+        "address": "456 Elm St, Springfield",
+        "rating": 4.7,
+        "cuisine": "Japanese",
+        "phone": "(123) 456-7891",
+        "opening_hours": {
+            "monday": "11:00 AM - 10:00 PM",
+            "tuesday": "11:00 AM - 10:00 PM",
+            "wednesday": "11:00 AM - 10:00 PM",
+            "thursday": "11:00 AM - 10:00 PM",
+            "friday": "11:00 AM - 11:00 PM",
+            "saturday": "11:00 AM - 11:00 PM",
+            "sunday": "11:00 AM - 9:00 PM"
+        },
+        "menu": [
+            {
+                "item_name": "California Roll",
+                "price": 8.99,
+                "description": "Crab, avocado, and cucumber roll"
+            },
+            {
+                "item_name": "Tuna Sashimi",
+                "price": 12.99,
+                "description": "Fresh tuna sashimi slices"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Burger Haven",
+        "address": "789 Oak St, Springfield",
+        "rating": 4.3,
+        "cuisine": "American",
+        "phone": "(123) 456-7892",
+        "opening_hours": {
+            "monday": "10:00 AM - 10:00 PM",
+            "tuesday": "10:00 AM - 10:00 PM",
+            "wednesday": "10:00 AM - 10:00 PM",
+            "thursday": "10:00 AM - 10:00 PM",
+            "friday": "10:00 AM - 11:00 PM",
+            "saturday": "10:00 AM - 11:00 PM",
+            "sunday": "10:00 AM - 9:00 PM"
+        },
+        "menu": [
+            {
+                "item_name": "Classic Cheeseburger",
+                "price": 10.99,
+                "description": "Beef patty with cheese, lettuce, tomato, and pickles"
+            },
+            {
+                "item_name": "BBQ Bacon Burger",
+                "price": 12.99,
+                "description": "Beef patty with BBQ sauce, bacon, and cheddar cheese"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Spicy Thai",
+        "address": "321 Pine St, Springfield",
+        "rating": 4.6,
+        "cuisine": "Thai",
+        "phone": "(123) 456-7893",
+        "opening_hours": {
+            "monday": "11:00 AM - 10:00 PM",
+            "tuesday": "11:00 AM - 10:00 PM",
+            "wednesday": "11:00 AM - 10:00 PM",
+            "thursday": "11:00 AM - 10:00 PM",
+            "friday": "11:00 AM - 11:00 PM",
+            "saturday": "11:00 AM - 11:00 PM",
+            "sunday": "11:00 AM - 9:00 PM"
+        },
+        "menu": [
+            {
+                "item_name": "Pad Thai",
+                "price": 11.99,
+                "description": "Stir-fried noodles with shrimp, peanuts, and bean sprouts"
+            },
+            {
+                "item_name": "Green Curry",
+                "price": 13.99,
+                "description": "Spicy green curry with chicken and vegetables"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Curry Palace",
+        "address": "654 Maple St, Springfield",
+        "rating": 4.4,
+        "cuisine": "Indian",
+        "phone": "(123) 456-7894",
+        "opening_hours": {
+            "monday": "11:00 AM - 10:00 PM",
+            "tuesday": "11:00 AM - 10:00 PM",
+            "wednesday": "11:00 AM - 10:00 PM",
+            "thursday": "11:00 AM - 10:00 PM",
+            "friday": "11:00 AM - 11:00 PM",
+            "saturday": "11:00 AM - 11:00 PM",
+            "sunday": "11:00 AM - 9:00 PM"
+        },
+        "menu": [
+            {
+                "item_name": "Chicken Tikka Masala",
+                "price": 13.99,
+                "description": "Chicken in a creamy tomato sauce"
+            },
+            {
+                "item_name": "Lamb Rogan Josh",
+                "price": 15.99,
+                "description": "Tender lamb cooked in a spiced curry sauce"
+            }
+        ]
+    }
+]
