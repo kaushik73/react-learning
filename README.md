@@ -1,75 +1,44 @@
-# EP-5 Let’s Get Hooked:-
+# EP-6 : Exploring the world
 
-- What are Hooks ⇒ A normal JS utility function.
-- React keep data layer in sync with UI layer
-- **Whenever a state variable gets update, react re-renders the component.**
-- the setMethod in useState triggers the diff algo and then virtual DOM updates then UI
-- Why React is fast ⇒ it do efficient DOM manipulation via virtual DOM
-- Read More about react conciliation, react fiber
+Monolith VS Micro Service architecture :-
 
----
+![alt text](notesImages/image.png)
 
-There is no proper folder stru. provided by react but some are recommended :
-
-### Grouping by features or routes
-
-![alt text](image.png)
-
-### Grouping by file type
-
-![alt text](image-1.png)
+Nowadays, we follow Micro Service Archi.
 
 ---
 
-Component extension can be .js or .jsx : it doesn’t matter.
-`import MyComponent1, {MyComponent2} from "./MyComponent";`
+Showing data can be done in 2 ways :
 
-we can use : from “./MyComponent” **OR** from “./MyComponent.jsx” both works
-here MyComponent1 is default export and MyComponent2 is normal.
+— page loads > Call API > Render Page
 
-````jsx
-import MyComponent1 as MyComponentOne from "./MyComponent";```
-````
+— page loads > Render Page > Call API > Render Page (Better Approach) (we will use this)
 
-Named Export : When we put export before the name.
-`export const MyComponent2 = () => {}`
-
-**OR**
-`const MyComponent2 = () => {
-.
-.
-}
-export {MyComponent2}`
+2 renders are OK, we want better user experience.
 
 ---
 
-**Array Destructuring :**
+![alt text](notesImages/image-2.png)
 
-const [first, second] = numbers;
+PARAMETER vs ARGUMENT
 
-console.log(first); // Output: 1
-console.log(second); // Output: 2
+UseEffect Hook :
 
-const x = [1, 2, 3, 4, 5];
+- Called after component renders.
+- fetch() method is of browser or we can say our JS engine has.
+-
+- Below code Output : **Body rendered** then use Effect Called
 
-// Destructor the first and third elements
-const [a, , b] = x;
-
-console.log(a); // Output: 1
-console.log(b); // Output: 3
+![alt text](notesImages/image-3.png)
 
 ---
 
-Reconciliation == react fiber.
+Conditional Rendering : Rendering based on condition.
 
-Reconciliation = whenever something changes on UI it is called reconciliation.
+### **Whenever listOfRestaurents variable gets updated react will re-ender this Body component.**
 
-From react 16 new algo came = React fiber to update the DOM.
+Means : Whenever state variable updates, react triggers the re-conciliation cycle(re-render component).
 
-When you have UI, react creates virtual DOM.
+— listOfRestaurents is a constant variable then how it is getting updated ?
 
-Virtual DOM = Representation of a actual DOM.
-
-Virtual DOM = just an object , (React Element).
-
-Diff algo = finds the diff. between old and new virtual DOM. Calculates the diff. and updates the real DOM.
+Ans : so setListOfRestaurents updates the listOfRestaurents and have new instance of Body comp. and then re-render , so now listOfRestaurents is having the new updated value.

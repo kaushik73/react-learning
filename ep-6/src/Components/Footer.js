@@ -5,10 +5,7 @@ const Footer = () => {
     <div className="footer">
       Created By
       <i className="fa-solid fa-heart"></i>
-      <a href="https://www.linkedin.com/in/chetannada/" target="_blank">
-        Chetan Nada
-      </a>
-      <i className="fa-solid fa-copyright"></i>
+      Kaushik Jain <i className="fa-solid fa-copyright"></i>
       {year}
       <strong>
         Food<span>Fire</span>

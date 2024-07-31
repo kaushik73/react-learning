@@ -92,6 +92,30 @@
   margin: 20px;
   cursor: pointer;
 }
+.shimmer-container {
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.shimmer-search {
+  margin: 20px auto;
+  text-align: center;
+  width: 40%;
+  height: 20%;
+  max-width: 100%;
+  box-shadow: -1px 5px 10px 5px rgba(42, 42, 42, 0.2);
+  position: relative;
+}
+.shimmer-card {
+  width: 200px;
+  height: 350px;
+  border-radius: 5px;
+  box-shadow: -1px 5px 10px 5px rgba(42, 42, 42, 0.2);
+  padding: 10px;
+  margin: 20px;
+  cursor: pointer;
+}
 
 .card:hover {
   transform: scale(1.05);
