@@ -1816,4 +1816,3 @@ export const restaurantList = [
     subtype: "basic",
   },
 ];
-export const IMG_CDN_URL = `https://foodfire.onrender.com/api/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/`;

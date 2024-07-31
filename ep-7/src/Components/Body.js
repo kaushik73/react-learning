@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { restaurantList } from "../Utils/constants";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
-// 1:03 - ep-6
 function filterData(searchText, restaurants) {
   if (searchText.trim() === "") {
     return restaurants;
@@ -67,7 +66,12 @@ const Body = () => {
       </div>
       <div className="restaurant-list">
         {restaurants.map((restaurant) => (
-          <RestaurantCard key={restaurant.info.id} {...restaurant.info} />
+          <Link
+            key={restaurant.info.id}
+            to={"/restaurant/" + restaurant.info.id}
+          >
+            <RestaurantCard {...restaurant.info} />
+          </Link>
         ))}
       </div>
     </>

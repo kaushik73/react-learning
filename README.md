@@ -1,44 +1,60 @@
-# EP-6 : Exploring the world
+# EP-7 : Finding the Path
 
-Monolith VS Micro Service architecture :-
+useEffect with no dependency array it will be called whenever the component renders.
 
-![alt text](notesImages/image.png)
+```jsx
+useEffect(() => {
+  // do task
+});
+```
 
-Nowadays, we follow Micro Service Archi.
+useEffect with dependency array is empty : only called in initial render of component
 
----
-
-Showing data can be done in 2 ways :
-
-— page loads > Call API > Render Page
-
-— page loads > Render Page > Call API > Render Page (Better Approach) (we will use this)
-
-2 renders are OK, we want better user experience.
+useEffect with dependency array is xx : every time xx changes useEffect will be called.
 
 ---
 
-![alt text](notesImages/image-2.png)
+do not create useState variable in if-else , loop , functions.
 
-PARAMETER vs ARGUMENT
-
-UseEffect Hook :
-
-- Called after component renders.
-- fetch() method is of browser or we can say our JS engine has.
--
-- Below code Output : **Body rendered** then use Effect Called
-
-![alt text](notesImages/image-3.png)
+they should be created only in funx. comp. at the top level.
 
 ---
 
-Conditional Rendering : Rendering based on condition.
+### Routing :
 
-### **Whenever listOfRestaurents variable gets updated react will re-ender this Body component.**
+```jsx
+const AppLayout = () => {
+  return (
+    <>
+      <Header />
+      <Outlet />
+      <Footer />
+    </>
+  );
+};
 
-Means : Whenever state variable updates, react triggers the re-conciliation cycle(re-render component).
+const root = ReactDOM.createRoot(document.getElementById("root"));
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Body />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+    ],
+  },
+  {
+    path: "*",
+    element: <Error />,
+  },
+]);
+root.render(<RouterProvider router={appRouter} />);
+```
 
-— listOfRestaurents is a constant variable then how it is getting updated ?
-
-Ans : so setListOfRestaurents updates the listOfRestaurents and have new instance of Body comp. and then re-render , so now listOfRestaurents is having the new updated value.
+Outlet gets filled by matching route of children
