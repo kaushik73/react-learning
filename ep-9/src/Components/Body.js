@@ -29,10 +29,10 @@ const Body = () => {
       }
     );
     const json = await data.json();
-    console.log(
-      json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants,
-      "json"
-    );
+    // console.log(
+    //   json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants,
+    //   "json"
+    // );
     setRestaurants(
       json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
     );

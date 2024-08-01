@@ -1,6 +1,7 @@
 import foodFireLogo from "../../public/Images/foodFireLogo.png";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import useOnline from "../Hooks/useOnlineStatus";
 const Title = ({ onLogoClick }) => {
   const handleLogoClick = () => {
     console.log("logo cliked");
@@ -30,6 +31,7 @@ const Header = () => {
     console.log("Header useEffect called");
   }, []);
 
+  const onlineStatus = useOnline();
   return (
     <div className="header">
       <Title onLogoClick={handleLogoClick} />
@@ -46,8 +48,9 @@ const Header = () => {
             <Link to="/contact"> Contact</Link>
           </li>
           <li>
-            <i className="fa-solid fa-cart-shopping"></i>
+            <Link to="/grocery"> Grocery</Link>
           </li>
+          <li>Online Staus : {onlineStatus ? "✅" : "🔴"}</li>
         </ul>
       </div>
     </div>

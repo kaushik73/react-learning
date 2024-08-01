@@ -9,9 +9,10 @@
 .header {
   display: flex;
   justify-content: space-between;
-  margin: 10px;
+  margin: 3px;
+  align-items: center;
   width: auto;
-  height: 5rem;
+  height: auto;
   background-color: rgb(1, 163, 144);
   border-radius: 5px;
   box-shadow: -1px 4px 20px 14px rgba(0, 0, 0, 0.2);
@@ -22,25 +23,24 @@
 .logo {
   padding-left: 10px;
   height: 90%;
-  width: 100px;
+  width: 80px;
   cursor: pointer;
 }
 
 .nav-items {
-  padding: 0px 20px;
+  /* padding: 0px 20px; */
   width: auto;
 }
-.nav-items > ul > li {
-  margin: 0px 20px;
-}
-
 .nav-items > ul {
   list-style-type: none;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-items > ul > li {
-  padding: 40px 10px 0 0;
+  padding: 0px 10px 0 0;
+  margin: 0px 10px;
   font-size: large;
   cursor: pointer;
 }
