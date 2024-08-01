@@ -27,8 +27,8 @@ const Header = () => {
     // console.log(x);
   };
   useEffect(() => {
-    console.log("useEffect called");
-  });
+    console.log("Header useEffect called");
+  }, []);
 
   return (
     <div className="header">
