@@ -14,7 +14,10 @@ class About extends React.Component {
     console.log("parent render");
     return (
       <div>
-        This is an About Functional Component
+        <h1 className="text-2xl no-underline bg-slate-400  m-2 p-2 rounded-xl font-bold ">
+          This is an About Functional Component
+        </h1>
+
         <AboutUserClass name={"first"} location={"bundi"} />
         <br></br>
         <hr />
