@@ -21,6 +21,10 @@ CSS is a stylesheet language whereas SCSS is a preprocessor scripting language t
 
 SCSS provides additional features and functionalities that are not available in regular CSS.
 
-SCSS syntax is very similar to CSS, but it allows for the use of variables, nesting, mixins, and other programming constructs. SCSS has a file extension of **.scss**.
+SCSS syntax is very similar to CSS, but it allows for the use of variables, nesting, mixins, and other programing constructs. SCSS has a file extension of **.scss**.
+
+---
+
+How To use : https://tailwindcss.com/docs/installation/framework-guides
 
 Parcel uses postcssrc to understand tailwind
