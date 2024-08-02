@@ -1,7 +1,7 @@
 // ## Namaste React Course by Akshay Saini
 // Chapter 05 - Let's get Hooked!
 
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./Components/Header";
 import Body from "./Components/Body";
@@ -11,13 +11,21 @@ import About from "./Components/About";
 import Error from "./Components/Error";
 import Contact from "./Components/Contact";
 import RestaurantDetail from "./Components/RestaurantDetail";
+import UserContext from "./Utils/UserContext";
 // import Grocery from "./Components/Grocery";
 const AppLayout = () => {
+  const [userName, setUserName] = useState("Default User");
   return (
     <>
-      <Header />
-      <Outlet />
-      <Footer />
+      <UserContext.Provider value={{ userName: userName, setUserName }}>
+        <Header />
+        <Outlet />
+        <UserContext.Provider
+          value={{ userName: "FooterContext - " + userName, setUserName }}
+        >
+          <Footer />
+        </UserContext.Provider>
+      </UserContext.Provider>
     </>
   );
 };

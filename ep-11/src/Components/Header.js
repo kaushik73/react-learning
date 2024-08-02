@@ -1,7 +1,8 @@
 import foodFireLogo from "../../public/Images/foodFireLogo.png";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import useOnline from "../Hooks/useOnlineStatus";
+import useOnline from "../Utils/useOnlineStatus";
+import UserContext from "../Utils/UserContext";
 const Title = ({ onLogoClick }) => {
   const handleLogoClick = () => {
     console.log("logo cliked");
@@ -22,6 +23,7 @@ const Title = ({ onLogoClick }) => {
 };
 
 const Header = () => {
+  const { userName } = useContext(UserContext);
   const [x, setX] = useState(0);
   const handleLogoClick = () => {
     setX((prev) => prev + 1);
@@ -50,7 +52,8 @@ const Header = () => {
           <li>
             <Link to="/grocery"> Grocery</Link>
           </li>
-          <li>Online Staus : {onlineStatus ? "✅" : "🔴"}</li>
+          <li>Online : {onlineStatus ? "✅" : "🔴"}</li>
+          <li>{userName}</li>
         </ul>
       </div>
     </div>

@@ -1,30 +1,31 @@
-# EP-9 Optimize Our App :
+# Ep-11 : Data is New Oil :
 
-Hooks = general utility JS functions.
-
----
-
-Chucking = Code Splitting = Lazy Loading = Dynamic Bundling = On Demand Loading = Dynamic Import
-
-![alt text](image.png)
-
-Now Grocery will be loaded when we click on that.
+if parent comp. controls the child comp. that it is known as controlled component otherwise uncontrolled comp.
 
 ---
 
-![alt text](image-1.png)
+To avoid prop drilling we use react Context.
 
-SCSS stands for **Sassy Cascading Style Sheets**,
-SASS stands for **Syntactically Awesome Style Sheets**
+Lets say we have a UserContext. we can use this is two ways, 1st is preferred and mostly used, 2nd used in class components majorly.
 
-CSS is a stylesheet language whereas SCSS is a preprocessor scripting language that is a superset of CSS.
+`1st :` const data = useContext(UserContext);
 
-SCSS provides additional features and functionalities that are not available in regular CSS.
+<p>Name : data.name</p>
 
-SCSS syntax is very similar to CSS, but it allows for the use of variables, nesting, mixins, and other programing constructs. SCSS has a file extension of **.scss**.
+`1st :` const {name} = useContext(UserContext);
 
----
+<p>Name : name</p>
 
-How To use : https://tailwindcss.com/docs/installation/framework-guides
+`2nd :` {
 
-Parcel uses postcssrc to understand tailwind
+<p>Name :
+
+<UserContext.consumer>
+
+{(data) = > <p>{data.name} </p>}
+
+</UserContext.consumer>
+
+</p>
+
+}

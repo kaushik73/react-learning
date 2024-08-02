@@ -1,11 +1,14 @@
-// Footer component for footer section
+import { useState, useEffect, useContext } from "react";
+import UserContext from "../Utils/UserContext";
 const Footer = () => {
   const year = new Date().getFullYear();
+  const { userName } = useContext(UserContext);
+
   return (
     <div className="footer">
       Created By
       <i className="fa-solid fa-heart"></i>
-      Kaushik Jain <i className="fa-solid fa-copyright"></i>
+      {userName} <i className="fa-solid fa-copyright"></i>
       {year}
       <strong>
         Food<span>Fire</span>

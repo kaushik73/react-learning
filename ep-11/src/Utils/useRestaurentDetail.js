@@ -14,9 +14,13 @@ const useRestaurantDetail = (resId) => {
       }
     );
     const json = await data.json();
-    let rest =
-      json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
-    restaurantData;
+    // let rest =
+    //   json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
+    // restaurantData;
+
+    const rest = json.data.cards[1].card.card?.gridElements
+      ? json.data.cards[1].card.card?.gridElements?.infoWithStyle?.restaurants
+      : json.data.cards[3].card.card?.gridElements?.infoWithStyle?.restaurants;
 
     let usefullData = rest.filter((oneRest) => {
       return oneRest.info.id == resId;
