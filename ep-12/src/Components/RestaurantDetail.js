@@ -62,9 +62,8 @@ const RestaurantDetail = () => {
           {" "}
           {recommendedData.map((item, index) => {
             return (
-              <li>
+              <li key={index}>
                 <RecommendedItem
-                  key={index}
                   recommendedData={item.info}
                   handleOpen={() => {
                     setIsOpen((prevIndex) => {
