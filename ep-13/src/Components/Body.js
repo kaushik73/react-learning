@@ -19,14 +19,8 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
   const [restaurants, setRestaurants] = useState([]);
   const [originalList, setOriginalList] = useState([]); // Original list is kept intact
-  // const [contextName, setContextName] = useState("");
   const PromotedRestaurantCard1 = PromotedRestaurantCard(RestaurantCard);
   const { userName, setUserName } = useContext(UserContext);
-  // const handleContextChange = (e) => {
-  //   setContextName(e.target.value);
-  //   console.log("Context Name", contextName);
-  //   setUserName(contextName);
-  // };
 
   async function fetchData() {
     let data = await fetch(
@@ -42,14 +36,8 @@ const Body = () => {
       ? json.data.cards[1].card.card?.gridElements?.infoWithStyle?.restaurants
       : json.data.cards[3].card.card?.gridElements?.infoWithStyle?.restaurants;
 
-    // .card.card.["@type"]    .card.card.brands
-    //   "type.googleapis.com/swiggy.seo.widgets.v1.BrandsContent";
     setRestaurants(x);
     setOriginalList(x);
-    // console.log(
-    //   "all data",
-    //   json.data.cards[6].card.card?.gridElements?.infoWithStyle?.restaurants
-    // );
   }
   const handleInputChange = (e) => {
     const value = e.target.value;

@@ -7,7 +7,6 @@ import { useSelector } from "react-redux";
 
 const Title = ({ onLogoClick }) => {
   const handleLogoClick = () => {
-    console.log("logo cliked");
     onLogoClick();
   };
   return (
@@ -26,17 +25,20 @@ const Title = ({ onLogoClick }) => {
 
 const Header = () => {
   const { userName } = useContext(UserContext);
+  const [loginText, setloginText] = useState("Login");
   const [x, setX] = useState(0);
+  const handleLoginClick = () => {
+    setloginText(loginText == "Login" ? "Logout" : "Login");
+  };
   const handleLogoClick = () => {
     setX((prev) => prev + 1);
   };
 
   const onlineStatus = useOnline();
-  // const sote = useSelector((store) => store);
+  // const store = useSelector((store) => store);
   // const cartItems = store.cart.items
   // this above code subs. to whole store - decrease performance
   const cartItems = useSelector((store) => store.cart.items);
-  console.log(cartItems);
   return (
     <div className="header">
       <Title onLogoClick={handleLogoClick} />
@@ -50,12 +52,19 @@ const Header = () => {
             <Link to="/about">About</Link>
           </li>
           <li>
+            {" "}
+            <Link to="/contact">Contact</Link>
+          </li>
+          <li>
             <Link to="/grocery"> Grocery</Link>
           </li>
           <li>Online : {onlineStatus ? "✅" : "🔴"}</li>
           <li>{userName}</li>
           <li>
             <Link to="/cart"> Cart ({cartItems.length})</Link>
+          </li>
+          <li>
+            <button onClick={handleLoginClick}> {loginText}</button>
           </li>
         </ul>
       </div>
